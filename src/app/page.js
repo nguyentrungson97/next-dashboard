@@ -28,7 +28,10 @@ export default function Home() {
       </header>
       <ul className="responsive-list">
         {dataTable.map((item) => (
-          <li className="list-item">
+          <li
+            className="list-item"
+            onClick={() => window.open(item.url, "_blank")}
+          >
             <div className="item-image">
               <img src={item.image} alt="Placeholder Image" />
             </div>
