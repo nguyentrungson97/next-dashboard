@@ -132,13 +132,24 @@ body {
 /* Responsive styles */
 @media (max-width: 768px) {
   .list-item {
-    flex-direction: column; /* Stack image and content */
-    text-align: center;
+    /* flex-direction: column;  */
+    /* text-align: center; */
   }
 
   .item-image img {
     width: 100px;
+    height: 100px;
     margin: 10px auto;
+  }
+  .item-image {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-content {
+    padding: 20px;
+    font-size: 13px;
   }
 }
 
