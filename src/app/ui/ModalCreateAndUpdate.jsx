@@ -1,7 +1,8 @@
 import { Button, Modal, Image, Form, Card, Input } from "antd";
 import { UploadButton } from "@/app/ui/UploadThing";
-import ReactQuill from "react-quill";
-import { useEffect, useState } from "react";
+// import ReactQuill from "react-quill";
+import { useEffect, useState, useMemo } from "react";
+import dynamic from "next/dynamic";
 
 export default function ModalCreateAndUpdate({
   open,
@@ -10,6 +11,11 @@ export default function ModalCreateAndUpdate({
   createData,
   updateData,
 }) {
+  const ReactQuill = useMemo(
+    () => dynamic(() => import("react-quill"), { ssr: false }),
+    []
+  );
+
   const [form] = Form.useForm();
   const [value, setValue] = useState("");
   const [imageUpload, setImageUpload] = useState("");
