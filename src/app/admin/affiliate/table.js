@@ -28,8 +28,10 @@ export default function page({}) {
       description: description,
     });
   };
-  const isLogin = localStorage.getItem("user");
-
+  let isLogin = false;
+  if (typeof window !== "undefined") {
+    isLogin = localStorage.getItem("user");
+  }
   if (!isLogin) {
     redirect("/admin");
   }

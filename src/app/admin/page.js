@@ -2,7 +2,10 @@
 import React, { useState } from "react";
 import Login from "@/app/ui/Login";
 export default function page() {
-  const isLogin = localStorage.getItem("user");
+  let isLogin = false;
+  if (typeof window !== "undefined") {
+    isLogin = localStorage.getItem("user");
+  }
   const [openModal, setOpenModal] = useState(!isLogin);
 
   return (

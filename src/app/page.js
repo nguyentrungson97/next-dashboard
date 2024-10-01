@@ -17,22 +17,22 @@ export default function Home() {
     getData();
   }, []);
   return (
-    <div class="container">
-      <header class="header">
-        <div class="container">
-          <div class="logo">
+    <div className="container">
+      <header className="header">
+        <div className="container">
+          <div className="logo">
             <img src="https://via.placeholder.com/50" alt="Logo" />
-            <span class="title">Tài chính duyệt nhanh</span>
+            <span className="title">Tài chính duyệt nhanh</span>
           </div>
         </div>
       </header>
-      <ul class="responsive-list">
+      <ul className="responsive-list">
         {dataTable.map((item) => (
-          <li class="list-item">
-            <div class="item-image">
+          <li className="list-item">
+            <div className="item-image">
               <img src={item.image} alt="Placeholder Image" />
             </div>
-            <div class="item-content">
+            <div className="item-content">
               <h3>{item.title}</h3>
               <p dangerouslySetInnerHTML={{ __html: item.content }}></p>
             </div>
