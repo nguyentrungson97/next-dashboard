@@ -40,3 +40,155 @@ a {
     color-scheme: dark;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f9fc; /* Light background, similar to PancakeSwap */
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.responsive-list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  background-color: #fff;
+  border: 2px solid #f0f0f0;
+  margin-bottom: 20px;
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-5px); /* Hover effect for lifting the card */
+}
+
+.item-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular image to match PancakeSwap style */
+  margin: 20px; /* Add some spacing around the image */
+  border: 2px solid #e2e2e2;
+}
+
+.item-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.item-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.item-content h3,
+.item-content p {
+  text-align: left; /* Keep text left-aligned */
+}
+
+/* Add some bright, PancakeSwap-like colors */
+body {
+  background-color: #f0f4f8;
+}
+
+.list-item {
+  background: linear-gradient(145deg, #f7f9fc, #e6ebf1); /* Subtle gradient */
+  border: none;
+}
+
+.item-content h3 {
+  color: #fa8231; /* Bright color for the title */
+}
+
+.item-content p {
+  color: #3d3d3d;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .list-item {
+    flex-direction: column; /* Stack image and content */
+    text-align: center;
+  }
+
+  .item-image img {
+    width: 100px;
+    margin: 10px auto;
+  }
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center; /* Center the logo and title */
+  align-items: center;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  width: 50px; /* Circular logo */
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px; /* Spacing between logo and title */
+}
+
+.header .title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fa8231; /* PancakeSwap-like orange */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header .container {
+    padding: 0 10px;
+  }
+
+  .header .title {
+    font-size: 1.5rem; /* Slightly smaller font size for mobile */
+  }
+
+  .header .logo img {
+    width: 40px;
+    height: 40px; /* Slightly smaller logo for mobile */
+  }
+}
